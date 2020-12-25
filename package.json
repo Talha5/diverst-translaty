@@ -1,9 +1,12 @@
 {
   "name": "diverst-translaty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Diverst custom implementation of Google Translate API",
-  "main": "index.js",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
   "scripts": {
+    "tsc": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "prepublish": "npm run tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,5 +15,11 @@
   ],
   "author": "Talha Meh",
   "license": "MIT",
-  "homepage": "https://github.com/Talha5/diverst-translaty"
+  "homepage": "https://github.com/Talha5/diverst-translaty",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "lib/"
+  ]
 }
