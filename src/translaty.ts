@@ -24,8 +24,7 @@ class DiverstTranslaty {
 
   async translate(text: string, target: string) {
     try {
-      const translation = await this.client.translate(text, target);
-      return translation;
+      return await this.client.translate(text, target);
     } catch (error) {
       throw Error(error.errors[0].message);
     }
