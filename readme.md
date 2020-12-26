@@ -12,10 +12,14 @@ npm install diverst-translaty
 
 ## Usage
 
-```python
-import { client } from 'diverst-translaty';
+```typescript
+import { DiverstTranslaty } from 'diverst-translaty';
 
+const client = DiverstTranslaty.new(projectId, apiKey)
 client.translate('text to translate', 'ch') # takes in two args: text and target lang
+
+client.listSupportedLanguages();
+
 ```
 
 ## Contributing

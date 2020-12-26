@@ -1,6 +1,4 @@
-import { add } from './add.js'
-import { subtract } from './subtract.js'
+import { DiverstTranslaty } from './translaty'
 export {
-  add,
-  subtract
+  DiverstTranslaty,
 }
