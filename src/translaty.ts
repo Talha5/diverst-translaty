@@ -1,22 +1,17 @@
+import { v2 } from '@google-cloud/translate';
+
 class DiverstTranslaty {
   projectId: string;
   apiKey: string;
   client: any;
 
   constructor(projectID: string, apiKey: string) {
-    if(!String(projectID)){
-      throw Error('Project ID not found.')
-    }else{
-      this.projectId = projectID;
-    }
-    if(!String(apiKey)){
-      throw Error('Api Key not found.')
-    }else{
-      this.apiKey = apiKey;
-    }
+    if(!String(projectID)) throw Error('Project ID not found.');
+    if(!String(apiKey)) throw Error('Api Key not found.');
 
-    const { Translate } = require('@google-cloud/translate').v2;
-    this.client = new Translate({
+    this.projectId = projectID;
+    this.apiKey = apiKey;
+    this.client = new v2.Translate({
       projectId: this.projectId,
       key: this.apiKey
     });
