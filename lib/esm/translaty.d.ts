@@ -1,8 +1,12 @@
-declare class DiverstTranslaty {
-    projectId: string;
+import Translate from "./interfaces/translate";
+declare class DiverstTranslaty implements Translate {
     apiKey: string;
-    client: any;
+    projectId: string;
+    targetLanguage: string;
+    textToTranslate: string;
+    private client;
     constructor(projectID: string, apiKey: string);
-    translate(text: string, target: string): Promise<any>;
+    translateText(textToTranslate: string, targetLanguage: string): Promise<string>;
+    createClientObj(): void;
 }
 export { DiverstTranslaty, };

@@ -15,7 +15,7 @@ describe('DiverstTranslaty client', () => {
 describe('DiverstTranslaty translates',  () => {
   it('throws error if credentials are invalid', async () => {
     const client = new DiverstTranslaty(faker.random.uuid(), faker.random.uuid());
-    await client.translate('Hello, world!', 'fr')
+    await client.translateText('Hello, world!', 'fr')
     .catch((err) => {
       expect(err.message).to.be.eq('API key not valid. Please pass a valid API key.')
     });
