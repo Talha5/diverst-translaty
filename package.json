@@ -1,6 +1,6 @@
 {
   "name": "diverst-translaty",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Diverst custom implementation of Google Translate API",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
